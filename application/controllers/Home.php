@@ -1,13 +1,10 @@
 <?php
 namespace application\controllers;
-class Home{
+class Home extends Controller{
     public function index()
     {
-        echo "index of home";
-    }
-    public function test($id)
-    {
-        echo $id;
+        $pName = "Pezho206t2";
+        $this->view("template.home",compact("pName"));
     }
 }
 ?>
