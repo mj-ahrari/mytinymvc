@@ -1,4 +1,6 @@
-
+<?php
+    $this->include("template.layout.header");
+    ?>
     <section class="container my-5">
         <section class="row">
             <section class="col-12">
@@ -39,4 +41,6 @@
             </section>
         </section>
     </section>
-
+    <?php
+    $this->include("template.layout.footer");
+    ?>

@@ -1,5 +1,7 @@
 
-
+<?php
+    $this->include("template.layout.header");
+    ?>
     <section class="container my-5">
         <!-- Example row of columns -->
         <section class="row">
@@ -19,3 +21,6 @@
             </section>
         </section>
     </section>
+    <?php
+    $this->include("template.layout.footer");
+    ?>
