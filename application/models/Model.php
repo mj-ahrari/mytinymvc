@@ -16,5 +16,38 @@ class Model{
             
         }
     }
+    public function __destruct()
+    {
+        $this->closeConnection();
+    }
+    protected function select($sql,$params = NULL)
+    {
+        if($params === NULL){
+            return $this->connection->query($sql);
+        }else{
+            $stmt = $this->connection->prepare($sql);
+            foreach($params as $key=>$val){
+                $stmt->bindValue($key,$val);
+            }
+            $stmt->execute();
+            return $stmt;
+        }
+    }
+    protected function execute($sql,$params = NULL)
+    {
+        if($params === NULL){
+            $this->connection->exec($sql);
+        }else{
+            $stmt = $this->connection->prepare($sql);
+            foreach($params as $key=>$val){
+                $stmt->bindValue($key,$val);
+            }
+            $stmt->execute();
+        }
+        return true;
+    }
+    private function closeConnection(){
+        $this->connection = NULL;
+    }
 }
 ?>
