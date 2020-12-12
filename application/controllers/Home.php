@@ -1,6 +1,5 @@
 <?php
 namespace application\controllers;
-use application\models;
 use application\models\Article;
 use application\models\Category;
 
