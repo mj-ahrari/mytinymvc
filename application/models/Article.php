@@ -22,5 +22,19 @@ class Article extends Model{
         $result = $this->select($sql,$params)->fetchAll();
         return $result;
     }
+    public function insert($title,$summary,$body,$cat_id)
+    {
+        $sql = "INSERT INTO `articles`(title, summary, body, cat_id, created_at)VALUES(:title, :summary, :body, :cat_id, ".time().")";
+        $params = array(":title"=>$title,":summary"=>$summary,":body"=>$body,":cat_id"=>$cat_id);
+        $this->execute($sql,$params);
+        return true;
+    }
+    public function delete($id)
+    {
+        $sql = "DELETE FROM `articles` WHERE id = :id";
+        $params = array(":id"=>$id);
+        $this->execute($sql,$params);
+        return true;
+    }
 }
 ?>
