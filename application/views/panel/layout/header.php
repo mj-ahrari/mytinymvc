@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mvc panel</title>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" media="all" type="text/css">
-    <link rel="stylesheet" href="../../css/style.css" media="all" type="text/css">
+    <link rel="stylesheet" href="<?php echo BASE_URL.'public/css/bootstrap.min.css' ?>" media="all" type="text/css">
+    <link rel="stylesheet" href="<?php echo BASE_URL.'public/css/style.css' ?>" media="all" type="text/css">
 </head>
 <body>
 <section id="app">
