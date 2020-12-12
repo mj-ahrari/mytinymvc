@@ -16,7 +16,7 @@ class Routing{
                     $methodParameterCount = $reflection->getNumberOfParameters();
                     if($methodParameterCount === 0){
                         $ctrlObj->$method();
-                    }else{
+                    }else{ 
                         if(isset($url[2])){
                             $requestParameterCount = sizeof(array_slice($url,2));
                         }else{
