@@ -1,4 +1,4 @@
-
+<?php  $this->include("panel.layout.header") ?>
             <section class="col-md-10 pt-3">
 
                 <form>
@@ -14,3 +14,4 @@
                 </form>
 
             </section>
+<?php  $this->include("panel.layout.footer") ?>
