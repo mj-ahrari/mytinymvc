@@ -12,6 +12,7 @@ class Model{
                 $this->connection = new PDO("mysql:host=".HOST.";dbname=".DBNANE.";", USERNAME, PASSWORD);
             }catch(PDOException $e){
                 echo "Error in connect to database. reason : ".$e->getMessage();
+                die;
             }
             
         }
