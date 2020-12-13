@@ -27,7 +27,7 @@
                                 <td><?=$article['cat_id']?></td>
                                 <td><?=$article['summary']?></td>
                                 <td>
-                                    <a href="<?php echo BASE_URL."article/create/".$article['id']?>" class="btn btn-info btn-sm">Edit</a>
+                                    <a href="<?php echo BASE_URL."article/edit/".$article['id']?>" class="btn btn-info btn-sm">Edit</a>
                                     <a href="<?php echo BASE_URL."article/delete/".$article['id'] ?>" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>

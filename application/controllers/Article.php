@@ -41,5 +41,22 @@ class Article extends Controller{
         $articles = $articleModel->all();
         $this->view("panel.article.index",compact("articles"));      
     }
+    public function edit($id)
+    {
+        $articleModel = new ModelsArticle();
+        $categoryModel = new Category();
+        $article = $articleModel->getArticleDetails($id);
+        $categories = $categoryModel->all();
+        return $this->view("panel.article.edit",compact("article","categories"));
+    }
+    public function update($id)
+    {
+        $articleModel = new ModelsArticle();
+        $title = $_POST['title'];
+        $body = $_POST['body'];
+        $cat_id = $_POST['cat_id'];
+        $articleModel->update($id,$title,$body,$body,$cat_id);
+        return $this->redirect("article/index");
+    }
 }
 ?>

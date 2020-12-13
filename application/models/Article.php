@@ -36,5 +36,11 @@ class Article extends Model{
         $this->execute($sql,$params);
         return true;
     }
+    public function update($id,$title,$summary,$body,$cat_id)
+    {
+        $sql = "UPDATE `articles` SET title = :title, summary = :summary, body = :body, cat_id = :cat_id WHERE id = :id;";
+        $params = array(":title"=>$title,":summary"=>$summary,":body"=>$body, ":cat_id"=>$cat_id,":id"=>$id);
+        $this->execute($sql,$params);
+    }
 }
 ?>
