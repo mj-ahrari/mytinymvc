@@ -1,7 +1,7 @@
 <?php $this->include("panel.layout.header") ?>
 <section class="col-md-10 pt-3">
 
-    <form action="<?php echo BASE_URL . "article/update/".$article['id'] ?>" method="POST">
+    <form action="<?php echo BASE_URL . "article/update/" . $article['id'] ?>" method="POST">
         <section class="form-group">
             <label for="title">Title</label>
             <input type="text" class="form-control" id="title" placeholder="title ..." name="title" value="<?php echo $article['title'] ?>">

@@ -1,16 +1,12 @@
 <?php  $this->include("panel.layout.header") ?>
             <section class="col-md-10 pt-3">
 
-                <form>
+                <form action="<?php echo BASE_URL."category/store" ?>" method="POST">
                     <section class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="name ...">
+                        <input type="text" class="form-control" id="name" placeholder="name ..." name="name">
                     </section>
-                    <section class="form-group">
-                        <label for="description">Description</label>
-                        <input type="text" class="form-control" id="description" placeholder="description ...">
-                    </section>
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary" name="create">Create</button>
                 </form>
 
             </section>

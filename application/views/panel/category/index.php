@@ -3,7 +3,7 @@
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
                     <h2 class="h4">Categories</h2>
-                    <a href="create.html" class="btn btn-sm btn-success">Create</a>
+                    <a href="<?php echo BASE_URL."category/create"?>" class="btn btn-sm btn-success">Create</a>
                 </section>
 
                 <section class="table-responsive">
@@ -12,29 +12,22 @@
                             <tr>
                                 <th>#</th>
                                 <th>name</th>
-                                <th>description</th>
                                 <th>setting</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                            $i=1;
+                            foreach($categories as $category){?>
                             <tr>
-                                <td>1</td>
-                                <td>Sport</td>
-                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                <td><?=$i?></td>
+                                <td><?=$category['name']?></td>
                                 <td>
-                                    <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
-                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="<?php echo BASE_URL."category/edit/".$category['id'] ?>" class="btn btn-info btn-sm">Edit</a>
+                                    <a href="<?php echo BASE_URL."category/delete/".$category['id']?>" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>News</td>
-                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                                <td>
-                                    <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
-                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                                </td>
-                            </tr>
+                            <?php $i++; }?>
                         </tbody>
                     </table>
                 </section>
